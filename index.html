@@ -268,9 +268,32 @@
 		</footer>
 		
 		
+		<style>
+			.header__logo {
+				display: flex;
+				align-items: center;
+			}
+		
+			.header__container {
+				padding-top: 50px;
+				padding-bottom: 20px;
+				transition: all 0.5s;
+			}
+			
+			header.is-fixed {
+				background: rgba(0,0,0,0.9);
+			}
+			
+			header.is-fixed .header__container {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				
+			}
+		</style>
 		
 		<script src="./js/jquery-3.5.1.min.js"></script>
 		
+		<script src="./js/fixed_header.js"></script>
 		<script src="./js/anchor.js"></script>
 		<script src="./js/number.js"></script>
 	</body>
