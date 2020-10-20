@@ -39,14 +39,26 @@ a {
     max-width: $max_width;
     margin: auto;
     padding: 50px 20px 20px;
+
+    transition: all 0.5s;
    }
 
   &__logo {
-
+    display: flex;
+    align-items: center;
   }
 
   &__nav {
 
+  }
+
+  &.is-fixed {
+    background: rgba(0,0,0,0.9);
+
+    .header__container {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 }
 
@@ -174,7 +186,6 @@ a {
 
   &__content {
     width: 100%;
-    margin-bottom: 70px;
 
     .section {
       &__title, &__desc {
@@ -210,8 +221,7 @@ a {
     align-items: flex-start;
     flex-wrap: wrap;
 
-
-    margin: 0;
+    margin: 70px 0 0 0;
     padding: 0;
     list-style-type: none;
   }
@@ -219,6 +229,8 @@ a {
   &__item {
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 20px;
 
     &:not(:last-child) {
       margin-right: 40px;
@@ -241,9 +253,55 @@ a {
     letter-spacing: 0;
     text-align: left;
     color: $gold;
+
+    span {
+      color: inherit;
+    }
   }
 
   &__item-title {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: left;
+    color: white;
+  }
+
+  &__networks-title {
+    margin-top: 40px;
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: left;
+    color: white;
+  }
+
+  &__networks {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__network {
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__network-title {
+    margin-top: 10px;
+
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -277,6 +335,13 @@ a {
     right: 0;
     bottom: 0;
     left: 0;
+  }
+}
+
+.section--right-content {
+  .section__content {
+    max-width: 452px;
+    margin-left: auto;
   }
 }
 
@@ -399,9 +464,4 @@ a {
     color: white;
     background: black;
   }
-}
-
-.icon {
-
-
 }
