@@ -14,27 +14,27 @@
 	<header class="header">
 		<div class="header__container">
 			<div class="header__logo">
-				<a href="./">
+				<a href="./index.html">
 					<img src="./img/company_logo.png" alt="logo">
 				</a>
 			</div>
 
-			<div class="header__nav">
+			<nav class="header__nav">
 				<ul class="header-menu">
 					<li class="header-menu__item">
-						<a href="#" class="header-menu__item-link">Про нас</a>
+						<a href="#about" class="header-menu__item-link">Про нас</a>
 					</li>
 					<li class="header-menu__item">
 						<a href="./gallery.html" class="header-menu__item-link">Галерея</a>
 					</li>
 					<li class="header-menu__item">
-						<a href="#" class="header-menu__item-link">Контакти</a>
+						<a href="#contact" class="header-menu__item-link">Контакти</a>
 					</li>
 					<li class="header-menu__item header-menu__item--white">
-						<a href="#" class="header-menu__item-link">Є питання?</a>
+						<a href="#footer" class="header-menu__item-link">Є питання?</a>
 					</li>
 				</ul>
-			</div>
+			</nav>
 		</div>
 	</header>
 
@@ -51,7 +51,7 @@
 				<!--					</video>-->
 			</div>
 		</div>
-		<div class="section section--s1">
+		<div id="about" class="section section--s1">
 			<div class="section__container">
 				<div class="section__title">Що таке CMS Race?</div>
 				<div class="section__desc">
@@ -79,21 +79,27 @@
 					<li class="section__item">
 						<div class="section__item-top">
 							<div class="section__item-icon"></div>
-							<div class="section__item-number">54</div>
+							<div class="section__item-number">
+								<span class="js-number">54</span>
+							</div>
 						</div>
 						<div class="section__item-title">проекти</div>
 					</li>
 					<li class="section__item">
 						<div class="section__item-top">
 							<div class="section__item-icon"></div>
-							<div class="section__item-number">19</div>
+							<div class="section__item-number">
+								<span class="js-number">19</span>
+							</div>
 						</div>
 						<div class="section__item-title">переможців</div>
 					</li>
 					<li class="section__item">
 						<div class="section__item-top">
 							<div class="section__item-icon"></div>
-							<div class="section__item-number">10000+</div>
+							<div class="section__item-number">
+								<span class="js-number">10000</span>+
+							</div>
 						</div>
 						<div class="section__item-title">h. p.</div>
 					</li>
@@ -193,7 +199,7 @@
 			</div>
 		</div>
 
-		<div class="section section--sContact">
+		<div id="contact" class="section section--sContact">
 			<div class="section__container">
 
 
@@ -237,7 +243,7 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer">
+		<footer id="footer" class="footer">
 			<div class="footer__container">
 				<div class="footer__content">
 					<div class="footer__title">Маєш запитання до нас?</div>
@@ -260,6 +266,12 @@
 				Copyright 2020 © CMS Race All rights reserved. Designed by it-nity
 			</div>
 		</footer>
-
+		
+		
+		
+		<script src="./js/jquery-3.5.1.min.js"></script>
+		
+		<script src="./js/anchor.js"></script>
+		<script src="./js/number.js"></script>
 	</body>
 </html>
