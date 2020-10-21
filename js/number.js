@@ -5,10 +5,8 @@ $(document).ready(function(){
 		
 		var numb_finish = $(this).text();
 			
-		$(window).scroll(function() {
-			var scrollEvent = ($(window).scrollTop() > (target_block.position().top - $(window).height()));
-			
-			if(scrollEvent && blockStatus) {
+		$(window).scroll(function() {			
+			if(isScrolledIntoView(target_block) && blockStatus) {
 				blockStatus = false;
 				
 				$({numberValue: 0}).animate({numberValue: numb_finish}, {
@@ -22,4 +20,15 @@ $(document).ready(function(){
 			}
 		});
 	});	
+	
+	function isScrolledIntoView(elem)
+	{
+			var docViewTop = $(window).scrollTop();
+			var docViewBottom = docViewTop + $(window).height();
+
+			var elemTop = $(elem).offset().top;
+			var elemBottom = elemTop + $(elem).height();
+
+			return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	}
 });
