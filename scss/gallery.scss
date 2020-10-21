@@ -1,0 +1,158 @@
+@import "variables";
+@import "fonts";
+
+.gallery {
+  position: relative;
+
+  min-height: 700px;
+
+  padding: 130px 0 130px;
+
+  background: black;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    height: 200px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 72.91%, #000000 95.31%);
+
+  }
+
+  &__container {
+    z-index: 2;
+    position: relative;
+
+    max-width: $max_width_sec;
+    margin: 0 auto;
+  }
+
+  &__title {
+    margin-bottom: 13px;
+
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 57px;
+    letter-spacing: 0;
+    text-align: left;
+    color: white;
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 0 90px 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 137px;
+    height: 50px;
+
+    border-radius: $border_radius;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: center;
+    color: white;
+
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 21px;
+    }
+  }
+
+  &__works {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 0 0 -20px;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__work {
+    position: relative;
+
+    width: 452px;
+    height: 260px;
+
+    margin: 0 0 20px 20px;
+
+    &:hover {
+      .gallery__work-content {
+        display: flex;
+      }
+    }
+  }
+
+  &__work-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(0,0,0,0.7);
+  }
+
+  &__work-title {
+    margin-bottom: 10px;
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-align: center;
+    color: white;
+  }
+
+  &__work-desc {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: center;
+    color: white;
+  }
+
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    img {
+      width: 100%;
+      background: #C4C4C4;
+      opacity: 0.5;
+    }
+  }
+}
