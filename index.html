@@ -22,15 +22,11 @@
 
 			<nav class="header__nav">
 				
-				<div class="header__nav-icon-open j-menu-open">
-					<i class="icon icon--list"></i>
+				<div class="header__nav-icon-open j-menu">
+					<i class="icon icon--bar"></i>
 				</div>
 				
 				<div class="header__nav-container">
-					<div class="header__nav-icon-close j-menu-close">
-						<i class="icon icon--cross">X</i>
-					</div>
-				
 					<ul class="header-menu">
 						<li class="header-menu__item">
 							<a href="#about" class="header-menu__item-link">Про нас</a>
@@ -49,7 +45,7 @@
 			</nav>
 			
 			<style>
-				.header__nav-icon-open, .header__nav-icon-close {
+				.header__nav-icon-open {
 					display: none;
 				}
 				
@@ -65,8 +61,10 @@
 				
 				@media (max-width: 900px) {
 					
-					.header__nav-icon-open, .header__nav-icon-close {
+					.header__nav-icon-open {
 						display: block;
+
+						height: 26px;
 					}
 					
 					.header__nav-container {
@@ -80,12 +78,17 @@
 					.header__nav.is-opened .header-menu {
 						flex-direction: column;
 					}
-					
-					.header__nav-icon-close {
-						postion: absolute;
-						top: 10px;
-						right: 10px;
-						
+
+					.header__nav.is-opened .icon--bar {
+						background: transparent;
+					}
+					.header__nav.is-opened .icon--bar:before {
+						top: 0;
+						transform: rotate(45deg);
+					}
+					.header__nav.is-opened .icon--bar:after {
+						bottom: 0;
+						transform: rotate(-45deg);
 					}
 				}
 			</style>

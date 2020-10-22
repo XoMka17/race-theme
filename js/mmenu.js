@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var menu_opened = false;
 	var menu = $('.header__nav');
 	
-	$(".j-menu-open").on("click", function (event) {
+	$(".j-menu").on("click", function (event) {
 		
 		if(!menu_opened) {
 			menu_opened = true;
